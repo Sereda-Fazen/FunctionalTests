@@ -28,37 +28,13 @@ class Login
 
         $I->amOnPage(self::$URL);
         $I->click(self::$clickLogIn);
-        $I->fillField(self::$pass, $password);
-        $I->click(self::$submit);
-        $I->see('Hello, alex sereda!','div.welcome-msg');
-
-
-        return $this;
-    }
-
-
-
-    public function login($name, $password)
-    {
-        $I = $this->tester;
-
-        $I->amOnPage(self::$URL);
-        $I->click(self::$clickLogIn);
         $I->fillField(self::$email, $name);
         $I->fillField(self::$pass, $password);
         $I->click(self::$submit);
-        $I->see('Hello, alex sereda!','div.welcome-msg');
+        $I->seeElement('//div[@class="dashboard"]/div/h1');
 
 
         return $this;
-    }
-
-    public function logout()
-    {
-        $I = $this->tester;
-        $I->click(self::$logout);
-        $I->see('You have logged out and will be redirected to our homepage in 5 seconds.',self::$msg);
-
     }
 
 
