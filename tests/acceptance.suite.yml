@@ -1,0 +1,105 @@
+class_name: AcceptanceTester
+modules:
+    enabled:
+        - WebDriver
+        - Helper\Acceptance
+
+
+    config:
+        WebDriver:
+            url: 'https://staging:prospect@dev8.denimio.com'
+            browser: chrome
+
+            window_size: 1980x1780
+            restart: false
+            #clear_cookies: false
+            #wait: 1
+
+            # --run in browserstack--
+
+            #host: 'hub.browserstack.com'
+            #port: 80
+            browser: chrome
+            cookies:
+              cookie-1:
+                Name: ProspectQA
+                Value: ProspectQA
+            #window_size: 600x8002
+            resolution: 1980x1780
+            restart: false
+            #wait: 13
+            #clear_cookies: false
+
+            capabilities:
+             browserstack.user: 'mahotoharada1'
+             browserstack.key: 'UYCHp6jL5gei8WxtKVjY'
+             #browserstack.user: 'vladshalda1'
+             #browserstack.key: 'vMqut6yLFsfbhDzhB643'
+
+             browserstack.debug: 'true'
+             #applicationCacheEnabled: false
+             unexpectedAlertBehaviour: 'accept'
+             pageLoadStrategy: 'eager'
+             os: 'WINDOWS'
+             os_version: 7
+
+
+env:
+
+  DEV_8:
+
+  DEV_PROD:
+    modules:
+      config:
+        WebDriver:
+          url: 'https://www.denimio.com'
+
+  DEV_2:
+    modules:
+      config:
+        WebDriver:
+          url: 'http://staging:prospect@dev2.denimio.com'
+
+  DEV_3:
+    modules:
+      config:
+        WebDriver:
+          url: 'http://staging:prospect@dev3.denimio.com'
+
+  DEV_4:
+    modules:
+      config:
+        WebDriver:
+          url: 'http://staging:prospect@dev4.denimio.com'
+
+  DEV_5:
+    modules:
+      config:
+        WebDriver:
+          url: 'http://staging:prospect@dev5.denimio.com'
+
+  DEV_6:
+    modules:
+      config:
+        WebDriver:
+          url: 'http://staging:prospect@dev6.denimio.com'
+
+  DEV_7:
+    modules:
+      config:
+        WebDriver:
+          url: 'http://staging:prospect@dev7.denimio.com'
+
+  DEV_9:
+    modules:
+      config:
+        WebDriver:
+          url: 'http://staging:prospect@dev9.denimio.com'
+
+  DEV_PROX:
+    modules:
+      config:
+        WebDriver:
+          url: 'http://ns524995.ip-192-99-232.net'
+
+
